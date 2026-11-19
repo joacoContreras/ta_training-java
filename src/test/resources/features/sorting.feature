@@ -17,3 +17,8 @@ Feature: Product Sorting Functionality
   Scenario: UC-2 Sort by Name (Z to A)
     When the user selects "Name (Z to A)" in sorting dropdown
     Then items should be sorted in reverse alphabetical order from Z to A
+
+  @uc-3
+  Scenario: UC-3 Sort by Price (low to high)
+    When the user selects "Price (low to high)" in sorting dropdown
+    Then items should be sorted by price from low to high
