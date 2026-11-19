@@ -52,3 +52,7 @@ out/
 # OS generated
 .DS_Store
 Thumbs.db
+
+# Allure
+allure-results/
+.allure/
