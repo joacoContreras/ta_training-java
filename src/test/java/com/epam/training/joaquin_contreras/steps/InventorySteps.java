@@ -74,4 +74,22 @@ public class InventorySteps {
                 .as("Items should be sorted by price from low to high")
                 .containsExactlyElementsOf(expectedSortedPrices);
     }
+
+    @Then("items should be sorted by price from high to low")
+    public void itemsShouldBeSortedByPriceFromHighToLow() {
+        logger.info("Step: verifying items are sorted by price (high to low)");
+        List<Double> actualPrices = getInventoryPage().getProductPrices();
+        assertThat(actualPrices)
+                .as("Price list should not be empty")
+                .isNotEmpty();
+
+        List<Double> expectedSortedPrices = actualPrices.stream()
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        logger.info("Expected: {}, Actual: {}", expectedSortedPrices, actualPrices);
+
+        assertThat(actualPrices)
+                .as("Items should be sorted by price from high to low")
+                .containsExactlyElementsOf(expectedSortedPrices);
+    }
 }

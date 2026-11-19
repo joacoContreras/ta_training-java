@@ -22,3 +22,8 @@ Feature: Product Sorting Functionality
   Scenario: UC-3 Sort by Price (low to high)
     When the user selects "Price (low to high)" in sorting dropdown
     Then items should be sorted by price from low to high
+
+  @uc-4
+  Scenario: UC-4 Sort by Price (high to low)
+    When the user selects "Price (high to low)" in sorting dropdown
+    Then items should be sorted by price from high to low
