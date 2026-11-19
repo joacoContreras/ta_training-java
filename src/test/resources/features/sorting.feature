@@ -12,3 +12,8 @@ Feature: Product Sorting Functionality
   Scenario: UC-1 Sort by Name (A to Z)
     When the user selects "Name (A to Z)" in sorting dropdown
     Then items should be sorted in alphabetical order from A to Z
+
+  @uc-2
+  Scenario: UC-2 Sort by Name (Z to A)
+    When the user selects "Name (Z to A)" in sorting dropdown
+    Then items should be sorted in reverse alphabetical order from Z to A
